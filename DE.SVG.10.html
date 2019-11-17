@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <script src='object.js'></script>
+        <!--script src='./shapes.js'></script-->
+        <title>svg</title>
+        <style>
+            #svg {
+                outline: 1px solid green;
+                width: 400px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="svg"></div>
+
+        <script>
+            'use strict';
+            var $ = function (foo) {
+                return document.getElementById(foo);
+            };
+            
+            let initialize = function () {
+            let svg = Object.create(SVG);
+            svg.init('svg', '0 0 500 300', 'svg0');
+
+            svg.rect('10', '10', '100', '100', 'blue');
+            svg.rect('120', '10', '100', '50', 'green');
+
+            svg.circle('50', '50', '20', 'red');
+            svg.ellipse('100', '100', '30', '20', 'green');
+
+            svg.polygon('50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180', 'black');
+
+
+
+            };
+            
+
+            
+            window.addEventListener('load', initialize);
+
+
+                
+        </script>
+    </body>
+</html>

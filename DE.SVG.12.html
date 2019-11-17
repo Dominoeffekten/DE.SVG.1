@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <script src='object.js'></script>
+        <!--script src='./shapes.js'></script-->
+        <title>svg - DK</title>
+        <style>
+            #svg {
+                width: 370px;
+                height: 280px;
+                background-color: #C8042C;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="svg"></div>
+
+        <script>
+            'use strict';
+            var $ = function (foo) {
+                return document.getElementById(foo);
+            };
+            
+            let initialize = function () {
+            let svg = Object.create(SVG);
+            svg.init('svg', '0 0 370 280', 'svg0');
+
+            svg.rect('120', '0', '40', '280', '#fff');
+            svg.rect('0', '120', '370', '40', '#fff');
+
+
+
+            };
+            
+
+            
+            window.addEventListener('load', initialize);
+
+
+                
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        <script src='object.js'></script>
+        <!--script src='./shapes.js'></script-->
+        <title>svg - Grønland</title>
+        <style>
+            #svg {
+                width: 360px;
+                height: 240px;
+                background-color: #D10330;
+                outline: 1px solid black
+            }
+        </style>
+    </head>
+    <body>
+        <div id="svg"></div>
+
+        <script>
+            'use strict';
+            var $ = function (foo) {
+                return document.getElementById(foo);
+            };
+            
+            let initialize = function () {
+            let svg = Object.create(SVG);
+            svg.init('svg', '0 0 360 240', 'svg0');
+
+            svg.rect('0', '0', '360', '120', '#fff');//hvid firkant
+
+            svg.path('M60,120 a1,1 0 0,1 120,0', '#D10330')//rød
+            svg.path('M60,120 a1,1 0 0,0 120,0', '#fff')//hvid
+
+            };
+            
+
+            
+            window.addEventListener('load', initialize);
+
+
+                
+        </script>
+    </body>
+</html>
